@@ -1,13 +1,6 @@
 <?php
-// 此文件需要放到项目的根目录中，否则抽风绝对哈哈哈
 
-// $header = <<<EOF
-// This file's author is Neilyoz.
-
-// @link     https://neilyoz.github.io
-// @document https://neilyoz.github.io
-// @contact  neilyoz@foxmail.com
-// EOF;
+declare(strict_types=1);
 
 return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
@@ -16,20 +9,14 @@ return PhpCsFixer\Config::create()
         '@Symfony' => true,
         '@DoctrineAnnotation' => true,
         '@PhpCsFixer' => true,
-        // 'header_comment' => [
-        //    'commentType' => 'PHPDoc',
-        //    'header' => $header,
-        //    'separate' => 'none',
-        //    'location' => 'after_declare_strict',
-        // ],
         'array_syntax' => [
-            'syntax' => 'short'
+            'syntax' => 'short',
         ],
         'list_syntax' => [
-            'syntax' => 'short'
+            'syntax' => 'short',
         ],
         'concat_space' => [
-            'spacing' => 'one'
+            'spacing' => 'one',
         ],
         'blank_line_before_statement' => [
             'statements' => [
@@ -38,7 +25,7 @@ return PhpCsFixer\Config::create()
         ],
         'general_phpdoc_annotation_remove' => [
             'annotations' => [
-                'author'
+                'author',
             ],
         ],
         'ordered_imports' => [
@@ -83,9 +70,7 @@ return PhpCsFixer\Config::create()
     ])
     ->setFinder(
         PhpCsFixer\Finder::create()
-            ->exclude('bin')
             ->exclude('public')
-            ->exclude('runtime')
             ->exclude('vendor')
             ->in(__DIR__)
     )
